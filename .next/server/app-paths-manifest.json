@@ -1,0 +1,8 @@
+{
+  "/services/maintenance/page": "app/services/maintenance/page.js",
+  "/guides/first-time-leasing/page": "app/guides/first-time-leasing/page.js",
+  "/page": "app/page.js",
+  "/guides/best-car-for-you/page": "app/guides/best-car-for-you/page.js",
+  "/services/insurance/page": "app/services/insurance/page.js",
+  "/contact/page": "app/contact/page.js"
+}

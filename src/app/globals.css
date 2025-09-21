@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.05 0 0); /* Deep black */
+  --foreground: oklch(0.95 0.02 180); /* Light blue-white */
+  --card: oklch(0.08 0.01 180); /* Dark blue-black */
+  --card-foreground: oklch(0.95 0.02 180);
+  --popover: oklch(0.08 0.01 180);
+  --popover-foreground: oklch(0.95 0.02 180);
+  --primary: oklch(0.6 0.15 150); /* Emerald green */
+  --primary-foreground: oklch(0.98 0.01 180);
+  --secondary: oklch(0.15 0.02 210); /* Dark blue */
+  --secondary-foreground: oklch(0.95 0.02 180);
+  --muted: oklch(0.12 0.02 210);
+  --muted-foreground: oklch(0.65 0.05 200);
+  --accent: oklch(0.55 0.12 200); /* Blue accent */
+  --accent-foreground: oklch(0.98 0.01 180);
+  --destructive: oklch(0.6 0.2 20); /* Keep red for warnings */
+  --border: oklch(0.2 0.02 210);
+  --input: oklch(0.18 0.02 210);
+  --ring: oklch(0.6 0.15 150); /* Green focus ring */
+}
+
+.dark {
+  --background: oklch(0.03 0 0); /* Deeper black */
+  --foreground: oklch(0.98 0.01 180);
+  --card: oklch(0.06 0.01 210);
+  --card-foreground: oklch(0.98 0.01 180);
+  --popover: oklch(0.06 0.01 210);
+  --popover-foreground: oklch(0.98 0.01 180);
+  --primary: oklch(0.65 0.18 150); /* Brighter green for dark mode */
+  --primary-foreground: oklch(0.02 0 0);
+  --secondary: oklch(0.12 0.02 210);
+  --secondary-foreground: oklch(0.98 0.01 180);
+  --muted: oklch(0.1 0.02 210);
+  --muted-foreground: oklch(0.7 0.05 200);
+  --accent: oklch(0.6 0.15 200); /* Brighter blue accent */
+  --accent-foreground: oklch(0.98 0.01 180);
+  --border: oklch(0.15 0.02 210);
+  --input: oklch(0.15 0.02 210);
+  --ring: oklch(0.65 0.18 150);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+}
+
+/* Glassmorphism Effects - Apple iOS Liquid Glass Style */
+@layer utilities {
+  .glassmorphism {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 20, 40, 0.75); /* Dark blue tint */
+    border: 1px solid rgba(100, 255, 200, 0.2); /* Green border */
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  .glassmorphism-dark {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(5, 15, 25, 0.85); /* Deeper blue-black */
+    border: 1px solid rgba(100, 255, 200, 0.15);
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.5),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  }
+  
+  .glassmorphism-header {
+    backdrop-filter: blur(12px) saturate(150%);
+    background-color: rgba(0, 10, 20, 0.8);
+    border-bottom: 1px solid rgba(100, 255, 200, 0.1);
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .glassmorphism-card {
+    backdrop-filter: blur(20px) saturate(200%);
+    background-color: rgba(0, 15, 30, 0.6);
+    border: 1px solid rgba(100, 255, 200, 0.25);
+    box-shadow: 
+      0 8px 32px rgba(0, 50, 100, 0.3),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Enhanced Apple-style liquid glass effects */
+  .liquid-glass {
+    backdrop-filter: blur(40px) saturate(180%);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      0 8px 32px 0 rgba(0, 0, 0, 0.37),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Custom gradient utilities for green/blue theme */
+  .bg-green-gradient {
+    background: linear-gradient(135deg, oklch(0.6 0.15 150) 0%, oklch(0.55 0.12 160) 100%);
+  }
+  
+  .bg-blue-gradient {
+    background: linear-gradient(135deg, oklch(0.55 0.12 200) 0%, oklch(0.5 0.1 220) 100%);
+  }
+  
+  .text-green-gradient {
+    background: linear-gradient(135deg, oklch(0.6 0.15 150) 0%, oklch(0.55 0.12 160) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-blue-gradient {
+    background: linear-gradient(135deg, oklch(0.55 0.12 200) 0%, oklch(0.5 0.1 220) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Grid background animation */
+  .grid-green {
+    background-image: 
+      linear-gradient(rgba(100, 255, 200, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 255, 200, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .grid-blue {
+    background-image: 
+      linear-gradient(rgba(100, 200, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 200, 255, 0.02) 1px, transparent 1px);
+    background-size: 120px 120px;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, oklch(0.6 0.15 150), oklch(0.55 0.12 200));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, oklch(0.65 0.18 150), oklch(0.6 0.15 200));
+  }
+}
