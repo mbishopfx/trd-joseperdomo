@@ -1,1 +1,167 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/consulting",
+      "regex": "^/consulting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/consulting(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/credit-application",
+      "regex": "^/credit\\-application(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/credit\\-application(?:/)?$"
+    },
+    {
+      "page": "/guides/best-car-for-you",
+      "regex": "^/guides/best\\-car\\-for\\-you(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides/best\\-car\\-for\\-you(?:/)?$"
+    },
+    {
+      "page": "/guides/business-leasing",
+      "regex": "^/guides/business\\-leasing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides/business\\-leasing(?:/)?$"
+    },
+    {
+      "page": "/guides/credit-requirements",
+      "regex": "^/guides/credit\\-requirements(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides/credit\\-requirements(?:/)?$"
+    },
+    {
+      "page": "/guides/first-time-leasing",
+      "regex": "^/guides/first\\-time\\-leasing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides/first\\-time\\-leasing(?:/)?$"
+    },
+    {
+      "page": "/guides/lease-vs-buy",
+      "regex": "^/guides/lease\\-vs\\-buy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides/lease\\-vs\\-buy(?:/)?$"
+    },
+    {
+      "page": "/guides/luxury-leasing",
+      "regex": "^/guides/luxury\\-leasing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides/luxury\\-leasing(?:/)?$"
+    },
+    {
+      "page": "/inventory",
+      "regex": "^/inventory(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/inventory(?:/)?$"
+    },
+    {
+      "page": "/services/appraisal",
+      "regex": "^/services/appraisal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/appraisal(?:/)?$"
+    },
+    {
+      "page": "/services/commercial",
+      "regex": "^/services/commercial(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/commercial(?:/)?$"
+    },
+    {
+      "page": "/services/insurance",
+      "regex": "^/services/insurance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/insurance(?:/)?$"
+    },
+    {
+      "page": "/services/maintenance",
+      "regex": "^/services/maintenance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/maintenance(?:/)?$"
+    },
+    {
+      "page": "/services/personal-leasing",
+      "regex": "^/services/personal\\-leasing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/personal\\-leasing(?:/)?$"
+    },
+    {
+      "page": "/services/trade-in",
+      "regex": "^/services/trade\\-in(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/trade\\-in(?:/)?$"
+    },
+    {
+      "page": "/services/warranties",
+      "regex": "^/services/warranties(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/warranties(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
